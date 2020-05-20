@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Project 3</title>
+    <link rel="stylesheet" href="grad_cal.css">
+</head>
+<body>
+    <h1>Class Marksheet</h1>
+    <div>
+        <table id="studentData">
+            <tr>
+                <td>
+                    <form>
+                        <label for="fullname"> Họ tên
+                            <input type="text" class="fullname" name="fullname" id="fullname"  />
+                        </label>
+                    </form>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        <label for="math">Điểm toán 
+                            <input type="number" class="inputScore" id="math" min="0" max="10"/>
+                        </label>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        <label for="phy">Điểm lý
+                            <input type="number" class="inputScore" id="phy" min="0" max="10"/>
+                        </label>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        <label for="chem">Điểm hóa
+                            <input type="number" class="inputScore" id="chem" min="0" max="10"/>
+                        </label>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <button type="button" class="button" id="submit">Nhập</button>
+
+    <br /><br />
+
+    <table id="data">
+        <tr>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Điểm toán</th>
+            <th>Điểm lý</th>
+            <th>Điểm hóa</th>
+            <th>Trung bình</th>
+        </tr>
+    </table>
+
+    <br /><br />
+
+    <button type="button" class="button" id="calculate">Tính điểm trung bình</button>
+    <button type="button" class="button" id="analyze">Xác định học sinh giỏi</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="grad_cal.js"></script>
+</html>
