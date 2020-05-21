@@ -1,13 +1,18 @@
 //let studentID = localStorage.length;
 studentID = localStorage.length;
-for(let i = 1; i<=localStorage.length;i++)
-{
-    console.log(localStorage[i]);
-    arr = localStorage.getItem(`${i}`).split(",")
-    console.log(arr)
-    appendRow(`${i}`,arr[0],arr[1],arr[2],arr[3]);
+if(localStorage[0]){
+    for(let i = 1; i<=localStorage.length;i++)
+    {
+        console.log(localStorage[i]);
+        arr = localStorage.getItem(`${i}`).split(",")
+        console.log(arr)
+        appendRow(`${i}`,arr[0],arr[1],arr[2],arr[3]);
+    }
 }
+    
+
 document.querySelector("#submit").addEventListener("click",submit);
+document.querySelector("#clear").addEventListener("click",removeOldEntries);
 document.getElementById("analyze").style.visibility = "hidden";
 document.getElementById("calculate").style.visibility = "hidden";
 const inputScore = document.getElementsByClassName("inputScore");
@@ -36,6 +41,13 @@ inputName.addEventListener("keydown", function(e) {
     e.preventDefault();
     }
 });
+function removeOldEntries(){
+    for(let i = 1; i<localStorage.length;i++){
+        localStorage.removeItem(`${i}`);
+    }
+    //localStorage.clear();
+    window.location.reload();
+}
 function setDefaultInputClass(){
     document.querySelector("#fullname").className = "fullname";
     document.querySelector("#math").className = "inputScore";
@@ -106,7 +118,7 @@ function submit(){
     const math = Number(document.querySelector("#math").value);
     const phy = Number(document.querySelector("#phy").value);
     const chem = Number(document.querySelector("#chem").value);
-    if(isNameValid(fullname) && isScoreValid(math) && isScoreValid(phy) && isScoreValid(math) && isScoreValid(chem)){
+    if(isNameValid(fullname) && isScoreValid(math) && isScoreValid(phy) && isScoreValid(chem)){
         console.info("success")
         studentID++;
         appendRow(studentID,fullname,math,phy,chem);
@@ -116,6 +128,7 @@ function submit(){
         document.querySelector("#phy").value = "";
         document.querySelector("#chem").value = "";
         document.getElementById("calculate").style.visibility = "visible";
+        localStorage.setItem(studentID,`${fullname},${math},${phy},${chem}`);
     }
     else{
         console.info("error")
