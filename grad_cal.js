@@ -1,6 +1,7 @@
 //let studentID = localStorage.length;
-studentID = localStorage.length;
-if(localStorage[0]){
+let studentID = localStorage.length;
+console.log(studentID);     
+if(localStorage.getItem(`1`)){
     for(let i = 1; i<=localStorage.length;i++)
     {
         console.log(localStorage[i]);
@@ -20,15 +21,15 @@ const inputName = document.querySelector(".fullname");
 document.getElementById("calculate").addEventListener("click",calculate);
 document.getElementById("analyze").addEventListener("click",analyze);
 const invalidCharsInScore = [
-  "-",
-  "+",
-  "e",
-  "E",
+    "-",
+    "+",
+    "e",
+    "E",
 ];
 for(const i of inputScore){
     i.addEventListener("keydown", function(e) {
         if (invalidCharsInScore.includes(e.key)) {
-          e.preventDefault();
+            e.preventDefault();
         }
     })
 }
@@ -38,14 +39,11 @@ const invalidCharsInName = [
 ];
 inputName.addEventListener("keydown", function(e) {
     if (invalidCharsInName.includes(e.key)) {
-    e.preventDefault();
+        e.preventDefault();
     }
 });
 function removeOldEntries(){
-    for(let i = 1; i<localStorage.length;i++){
-        localStorage.removeItem(`${i}`);
-    }
-    //localStorage.clear();
+    localStorage.clear();
     window.location.reload();
 }
 function setDefaultInputClass(){

@@ -25,8 +25,6 @@ body {
     text-align: center;
     display: inline-block;
     transition: all .1s ease-in-out;
-    
-    
 }
 .button:hover {
     background-color: transparent;
@@ -74,19 +72,39 @@ input.error {
 #data td {
     width: 15%;
     border: black solid;
-    font-family: 'Poppins', sans-serif;
+    border-width: 2px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 #data th {
     width: 15%;
     border: black solid;
-    background-color: #0048BA;
+    border-width: 2px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0066ff;
     color: white;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+}
+table.data{
+    border-radius: 0.5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
 }
 .red {
     background-color: red;
