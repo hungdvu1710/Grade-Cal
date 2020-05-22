@@ -3,50 +3,43 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Project 3</title>
+    <title>Grade Report</title>
     <link rel="stylesheet" href="grad_cal.css">
 </head>
 <body>
-    <h1>Class Marksheet</h1>
+    <h1>Grade Report</h1>
     <div>
         <table id="studentData">
+            <form action="">
             <tr>
-                <td>
-                    <form>
+                    <td>    
                         <label for="fullname"> Họ tên
                             <input type="text" class="fullname" name="fullname" id="fullname"  />
                         </label>
-                    </form>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label for="math">Điểm toán 
                             <input type="number" class="inputScore" id="math" min="0" max="10"/>
                         </label>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label for="phy">Điểm lý
                             <input type="number" class="inputScore" id="phy" min="0" max="10"/>
                         </label>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label for="chem">Điểm hóa
                             <input type="number" class="inputScore" id="chem" min="0" max="10"/>
                         </label>
-                    </form>
-                </td>
-            </tr>
+                    </td>
+                </tr>
+            </form>
         </table>
     </div>
     <br />
@@ -70,6 +63,6 @@
 
     <button type="button" class="button" id="calculate">Tính điểm trung bình</button>
     <button type="button" class="button" id="analyze">Xác định học sinh giỏi</button>
+    <script src="grad_cal.js"></script>
 </body>
-<script src="grad_cal.js"></script>
 </html>
