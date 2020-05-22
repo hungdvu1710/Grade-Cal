@@ -20,6 +20,12 @@ const inputScore = document.getElementsByClassName("inputScore");
 const inputName = document.querySelector(".fullname");
 document.getElementById("calculate").addEventListener("click",calculate);
 document.getElementById("analyze").addEventListener("click",analyze);
+// const forms = document.querySelectorAll("form");
+// for(const i of forms){
+//     i.addEventListener("keydown", function(e) {
+//         e.preventDefault();
+//     })
+// }
 const invalidCharsInScore = [
     "-",
     "+",

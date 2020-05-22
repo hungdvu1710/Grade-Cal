@@ -19,8 +19,8 @@ body {
     background-color: #1c89ff;
     border: solid 1px transparent;
     color: #fff;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 380;
     cursor: pointer;
     text-align: center;
     display: inline-block;
@@ -43,7 +43,7 @@ input.fullname {
     box-sizing: border-box;
     border-color: #00308F;
     font-family: 'Cormorant Garamond', serif;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 input.inputScore {
     width: 100%;
@@ -52,7 +52,7 @@ input.inputScore {
     box-sizing: border-box;
     border-color: #00308F;
     font-family: 'Cormorant Garamond', serif;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 input.error {
     width: 100%;
@@ -61,7 +61,7 @@ input.error {
     box-sizing: border-box;
     font-family: 'Cormorant Garamond', serif;
     border-color: #ff0000;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 #studentData {
     padding: 15px 32px;
@@ -71,7 +71,7 @@ input.error {
 
 #data td {
     width: 15%;
-    border: black solid;
+    border: solid rgb(40, 54, 53);
     border-width: 2px;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
@@ -81,7 +81,7 @@ input.error {
 
 #data th {
     width: 15%;
-    border: black solid;
+    border: solid rgb(40, 54, 53);
     border-width: 2px;
     font-family: 'Montserrat', sans-serif;
     background-color: #0066ff;
@@ -96,7 +96,7 @@ table {
     border-collapse: collapse;
 }
 table.data{
-    border-radius: 0.5px;
+    border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
     border: none;
@@ -105,6 +105,7 @@ table.data{
     max-width: 100%;
     white-space: nowrap;
     background-color: white;
+    
 }
 .red {
     background-color: red;
